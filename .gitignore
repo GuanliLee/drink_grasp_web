@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+web.log
+web.pid
+recordings/
+*.db3
+*.mcap
+*.bag

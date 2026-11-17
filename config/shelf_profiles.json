@@ -1,0 +1,71 @@
+{
+  "default_profile_id": "shelf_1",
+  "profiles": [
+    {
+      "id": "shelf_1",
+      "name_zh": "货架1（原货架）",
+      "scene_id": 1,
+      "default_layer": "2",
+      "default_position": "3",
+      "place_poses_file": "place_poses_shelf_1.json",
+      "pick_place_poses_file": "pick_place_poses_shelf_1.json",
+      "routes": {
+        "standalone_right_restock": "right_route_to_place.yaml",
+        "full_flow_left_restock": "left_full_flow_route_to_place.yaml",
+        "full_flow_right_pick": "right_full_flow_pick_route_to_place.yaml"
+      },
+      "slot_owners": {},
+      "slot_routes_required": false,
+      "slot_routes": {}
+    },
+    {
+      "id": "shelf_2",
+      "name_zh": "货架2（新大货架）",
+      "scene_id": 3,
+      "default_layer": "1",
+      "default_position": "5",
+      "place_poses_file": "place_poses_shelf_2.json",
+      "pick_place_poses_file": "pick_place_poses_shelf_2.json",
+      "routes": {
+        "standalone_right_restock": "right_route_to_place_scene_003.yaml",
+        "full_flow_left_restock": "left_full_flow_route_to_place_scene_003.yaml",
+        "full_flow_right_pick": "right_full_flow_pick_route_to_place_scene_003.yaml"
+      },
+      "slot_owners": {
+        "1": "left",
+        "2": "left",
+        "3": "left",
+        "4": "right",
+        "5": "right",
+        "6": "right",
+        "7": "left",
+        "8": "left",
+        "9": "left",
+        "10": "right",
+        "11": "right",
+        "12": "right"
+      },
+      "slot_routes_required": true,
+      "slot_routes": {
+        "standalone_restock": {
+          "right:1:4": "right_route_to_place_scene_003_layer_1_position_4.yaml",
+          "right:1:5": "right_route_to_place_scene_003_layer_1_position_5.yaml",
+          "right:1:6": "right_route_to_place_scene_003_layer_1_position_6.yaml",
+          "right:1:10": "right_route_to_place_scene_003_layer_1_position_4.yaml",
+          "right:1:11": "right_route_to_place_scene_003_layer_1_position_5.yaml",
+          "right:1:12": "right_route_to_place_scene_003_layer_1_position_6.yaml"
+        },
+        "standalone_return": {
+          "right:1:4": "right_route_to_photo_scene_003_layer_1_position_4.yaml",
+          "right:1:5": "right_route_to_photo_scene_003_layer_1_position_5.yaml",
+          "right:1:6": "right_route_to_photo_scene_003_layer_1_position_6.yaml",
+          "right:1:10": "right_route_to_photo_scene_003_layer_1_position_10.yaml",
+          "right:1:11": "right_route_to_photo_scene_003_layer_1_position_5.yaml",
+          "right:1:12": "right_route_to_photo_scene_003_layer_1_position_6.yaml"
+        },
+        "full_flow_left_restock": {},
+        "full_flow_right_pick": {}
+      }
+    }
+  ]
+}
